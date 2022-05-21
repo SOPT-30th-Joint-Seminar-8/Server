@@ -7,6 +7,7 @@ const message = {
     INTERNAL_SERVER_ERROR: "서버 내부 오류",
 
     READ_POSTS_SUCCESS: "전체 게시글 조회 성공",
+    CREATE_POST_SUCCESS: "게시글 생성 성공",
 };
 
 export default message;
