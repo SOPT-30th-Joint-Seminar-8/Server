@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { ReviewInfo } from "../interfaces/common/review/ReviewInfo";
+import { ReviewInfo } from "../interfaces/review/ReviewInfo";
 
 const ReviewScheme = new mongoose.Schema({
   user: {
