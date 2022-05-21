@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 import config from "../config";
+import Post from "../models/Post";
 import Review from "../models/Review";
 import User from "../models/User";
 
@@ -8,11 +9,14 @@ const connectDB = async () => {
     await mongoose.connect(config.mongoURI);
 
     mongoose.set("autoCreate", true);
-
     console.log("Mongoose Connected ...");
-
+  
     User.createCollection().then(function (collection) {
       console.log("USer Collection is created!");
+    });
+    
+    Post.createCollection().then(function (collection) {
+      console.log("Post Collection is created!");
     });
 
     Review.createCollection().then(function (collection) {
