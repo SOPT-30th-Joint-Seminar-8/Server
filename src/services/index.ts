@@ -1,2 +1,4 @@
+import PostService from "./PostService";
+
 //service index file
-export {};
+export { PostService };
