@@ -1,2 +1,4 @@
+import PostController from "./PostController";
+
 // controller index file
-export {};
+export { PostController };
