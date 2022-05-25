@@ -8,6 +8,9 @@ const message = {
 
     READ_POSTS_SUCCESS: "전체 게시글 조회 성공",
     CREATE_POST_SUCCESS: "게시글 생성 성공",
+
+    CREATE_REVIEW_SUCCESS: "댓글 생성 성공",
+    READ_REVIEW_SUCCESS: "댓글 조회 성공",
 };
 
 export default message;
