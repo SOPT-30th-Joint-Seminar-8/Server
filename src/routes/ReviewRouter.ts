@@ -10,4 +10,6 @@ router.post(
     ReviewController.createReview
 );
 
+router.get("/post/:postId", ReviewController.getReviews);
+
 export default router;

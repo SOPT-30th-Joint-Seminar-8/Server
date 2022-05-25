@@ -7,7 +7,7 @@ import util from "../modules/util";
 import ReviewService from "../services/ReviewService";
 
 /**
- * @route POST /post/:postId
+ * @route POST review//post/:postId
  * @desc Create Review
  * @access PUblic
  */
@@ -42,6 +42,30 @@ const createReview = async (req: Request, res: Response) => {
     }
 };
 
+/**
+ * @route GET review/post/:postId
+ * @desc Create Review
+ * @access PUblic
+ */
+const getReviews = async (req: Request, res: Response) => {
+    const { postId } = req.params;
+    try {
+        const data = await ReviewService.getReviews(postId);
+        res.status(statusCode.OK).send(
+            util.success(statusCode.OK, message.READ_REVIEW_SUCCESS, data)
+        );
+    } catch (error) {
+        console.log(error);
+        res.status(statusCode.INTERNAL_SERVER_ERROR).send(
+            util.fail(
+                statusCode.INTERNAL_SERVER_ERROR,
+                message.INTERNAL_SERVER_ERROR
+            )
+        );
+    }
+};
+
 export default {
     createReview,
+    getReviews,
 };
